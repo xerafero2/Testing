@@ -10,7 +10,8 @@ dependencyResolutionManagement {
     repositories {
         google()
         mavenCentral()
+        maven { url 'https://jitpack.io' } // Wajib untuk menarik core framework eksternal
     }
 }
-rootProject.name = "RealClonerOfficial"
+rootProject.name = "MultiClonerReal"
 include ':app'
