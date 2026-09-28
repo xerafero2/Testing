@@ -6,7 +6,7 @@ pluginManagement {
     }
 }
 dependencyResolutionManagement {
-    repositoriesMode.set(RepositoriesMode.PRESERVE_HERITAGE) // Mengizinkan pencarian gabungan repositori lokal & eksternal
+    // Kita hapus baris RepositoriesMode yang memicu masalah di Gradle 9
     repositories {
         google()
         mavenCentral()
