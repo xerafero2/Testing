@@ -1,6 +1,7 @@
 plugins {
-    id 'com.android.application'
-    id 'org.jetbrains.kotlin.android'
+    // Kita langsung sematkan versi plugin '8.2.2' di sini agar server GitHub Actions tidak bingung mencari versinya
+    id 'com.android.application' version '8.2.2'
+    id 'org.jetbrains.kotlin.android' version '1.9.22'
 }
 
 android {
@@ -14,7 +15,6 @@ android {
         versionCode 1
         versionName "1.0"
         
-        // Blackbox membutuhkan arsitektur native yang jelas
         ndk {
             abiFilters "armeabi-v7a", "arm64-v8a", "x86", "x86_64"
         }
@@ -40,6 +40,6 @@ dependencies {
     implementation 'androidx.appcompat:appcompat:1.6.1'
     implementation 'com.google.android.material:material:1.11.0'
     
-    // Memasukkan core engine virtualisasi BlackBox yang sesungguhnya
+    // Core engine virtualisasi BlackBox
     implementation 'com.github.FBlackBox:BlackBox:v1.6.0' 
 }
